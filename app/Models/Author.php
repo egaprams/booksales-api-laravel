@@ -3,27 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Sanctum\HasApiTokens;
 
 class Author extends Model
 {
-        private $author = [
-        [
-            'id' => '1',
-            'nama'=> 'Andrea Hirata'
-        ],
-        [
-            'id' => '2',
-            'nama'=> 'Eka Kurniawan'
-        ],
-        [
-            'id' => '3',
-            'nama'=> 'Pramoedya Ananta Toer'
-        ],
-        [
-            'id' => '4',
-            'nama'=> 'Pidi Baiq'
-        ],
-    ];
+    use HasApiTokens;
+    protected $table = 'authors';
 
     public function getAllGenre(){
         return $this->author;
