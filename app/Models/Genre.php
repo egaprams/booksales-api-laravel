@@ -11,8 +11,14 @@ class Genre extends Model
     use HasApiTokens;
 
     protected $table = 'genres';
-    
-    public function getAllGenre(){
+
+    protected $fillable = [
+        'name',
+        'description'
+    ];
+
+    public function getAllGenre()
+    {
         return $this->genres;
     }
 }

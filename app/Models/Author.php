@@ -10,6 +10,11 @@ class Author extends Model
     use HasApiTokens;
     protected $table = 'authors';
 
+    protected $fillable = [
+        'name',
+        'bio'
+    ];
+
     public function getAllGenre(){
         return $this->author;
     }
