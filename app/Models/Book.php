@@ -25,4 +25,13 @@ class Book extends Model
     {
         return $this->books;
     }
+
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class);
+    }
+    public function author()
+    {
+        return $this->belongsTo(Author::class);
+    }
 }
